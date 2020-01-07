@@ -12,7 +12,7 @@ An important representation rule has the markdown plus [.mdp] format.
 
 ## General options 
 
-`-f` *FORMAT*
+`-f` *FORMAT*, `--from=`*FORMAT*
 
 :   Specify input format.  *FORMAT* can be:
 
@@ -24,7 +24,7 @@ An important representation rule has the markdown plus [.mdp] format.
     - `markdown_plus` ([condoc's Markdown])
     :::
 
-`-t` *FORMAT*, `-w` *FORMAT*, `--to=`*FORMAT*, `--write=`*FORMAT*
+`-t` *FORMAT*, `--to=`*FORMAT*
 
 :   Specify output format.  *FORMAT* can be:
 

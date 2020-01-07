@@ -133,7 +133,7 @@ An important representation rule has the markdown plus [.mdp] format.
 ## Examples for converts:
 
 ### simple markdown plus to html fragment
-```bash
+```bash{.dark}
 $ cat > file.mdp
 # Head 1
 

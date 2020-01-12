@@ -8,7 +8,7 @@
 
 A converter for markup / markdown like **pandoc**, but using the macro-language **C4** for coding and customize input parser and output renderer. It has template engine comparable features and uses an intermarkup (html) as something like a intermediate representation.
 
-An important representation rule has the markdown plus [.mdp] format.
+An important representation rule has the markdown+ [.mdp] format.
 
 ## General options 
 
@@ -166,7 +166,7 @@ This convert the file.mdp to a single html file file.html.
     </div>
 ```
 
-### simple markdown plus to html 
+### simple markdown+ to html 
 The following converts the file.mdp sets the html title to HTML-Document and writes the converted to stdout.
 ```bash
 $ condoc -f markplus -t html -sh "HTML-Document" file.mdp -
@@ -193,13 +193,13 @@ $
 ```
 
 
-### markdown plus to multiple html files
+### markdown+ to multiple html files
 Now see a more complex example for writing multiple files from a single input file:
 ```bash
 $ condoc -t html-files -ib "<h2>" -sh "HTML-Document#ifdef(${head2}){' ~ ${head2}'}" file.mdp files/
 $ 
 ```
-This will convert a single markdown plus file, to multiple files inside of the files folder.
+This will convert a single markdown+ file, to multiple files inside of the files folder.
 Breaking this content down by each "\<h2>" / "## header" into a separated file.
 
 generated files are:

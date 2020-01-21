@@ -156,7 +156,7 @@ elitr, sed diam
 $ condoc -t html file.mdp file.html
 $ 
 ```
-This convert the file.mdp to a single html file file.html.
+This convert the file.mdp to a single partial html file file.html.
 
 ```html
     <h1>Head 1</h1>

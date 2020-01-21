@@ -283,23 +283,27 @@ _footer.c4.html
 _header.c4.html
 ```razor
 
-@bundle Sheets += () => "
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-"
-@bundle Scripts += () => "
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>    
-"
-@section Script() => "
+@bundle Sheets += (){
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+}
+@bundle Scripts += (){
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>    
+}
+@section Script(){
     <script type="text/javascript">
       console.log("page layout");
     </script>
-"
+}
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <span class="navbar-brand">@head["title"]</span>
       <ul class="navbar-nav">    
-        @outputfiles.each(f){ if(n==__file__) '<li><a class="nav-link active" href="#"   >#{f}</a></li>' else 
-                                              '<li><a class="nav-link"        href="#{f}">#{f}</a></li>'; }
+        @outputfiles.each(f){ if(f.isCurrent()) {
+         <li><a class="nav-link active" href="#"  >@f.basename()</a></li>
+        } else {
+         <li><a class="nav-link"        href="@f.basename().html">@f.basename()</a></li>
+        }
       </ul>
     </nav>
 ```
@@ -307,9 +311,9 @@ _header.c4.html
 
 bootstrap.c4.html
 ```razor
-@bundle Scripts += () => "
+@bundle Scripts += (){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-"
+}
 
 <!DOCTYPE html>
 <html>
@@ -338,7 +342,7 @@ files/part1.html
     <title>HTML-Doc</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="be722b64-672b-47c1-8088-f120295dfe19.min.css">
+    <link rel="stylesheet" href="./css/be722b64-672b-47c1-8088-f120295dfe19.min.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -356,7 +360,7 @@ files/part1.html
       &copy; 2012 Me. All rights reserved.
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>    
     <script type="text/javascript">
       console.log("page layout");
     </script>
@@ -373,7 +377,7 @@ files/part2.html
     <title>HTML-Doc</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="be722b64-672b-47c1-8088-f120295dfe19.min.css">
+    <link rel="stylesheet" href="./css/be722b64-672b-47c1-8088-f120295dfe19.min.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -395,7 +399,7 @@ files/part2.html
       &copy; 2012 Me. All rights reserved.
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>    
     <script type="text/javascript">
       console.log("page layout");
     </script>

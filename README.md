@@ -1,17 +1,5 @@
-#meta:{
-  title: "Condoc Quick User's Guide"
-  author: "Robert Jahns"
-  date: "January 5, 2020"
-}
 
-#style:{
-code, tt {
-  background-color: #f8f8f8;
-  border-radius: 3px;
-}
-}
-
-# condoc {.red}
+# condoc
 
 A converter for markup / markdown like **pandoc**, but using the macro-language **C4** for coding and customize input parser and output renderer. It has template engine comparable features and uses an intermarkup (html) as something like a intermediate representation.
 

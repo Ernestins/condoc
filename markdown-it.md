@@ -18,28 +18,60 @@ npm install markdown-it --save
 
 ## markdown-it -- Plugin
 - https://github.com/markdown-it/markdown-it-container
+- https://github.com/markdown-it/markdown-it-sup
+- https://github.com/markdown-it/markdown-it-sub
+- https://github.com/markdown-it/markdown-it-ins
+- https://github.com/markdown-it/markdown-it-del
 - https://github.com/markdown-it/markdown-it-footnote
+- https://github.com/markdown-it/markdown-it-deflist
+- https://github.com/markdown-it/markdown-it-abbr
 - https://github.com/markdown-it/markdown-it-mark
-  - only ==mark==
-  - missing:
+  - In CommonMark only:
+  ```md
+  ==mark==
   ```
-  ##### tags: ==mark==
-  ```
-- missing tags:
-  - missing:
-  ```
+  - missing hackmd tags:
+  ```md
   ##### tags: `tag1` `tag2` `tag3`
   ```
-- missing tags via yaml meta data:
-  - missing:
-  ```
+  - missing tags via yaml meta data:
+  ```md=
   ---
   tags: tag1, tag2, rage
   ---  
   ```
+  - missing cmd tag list:
+  ```cmd=
+  ###=tags:
+  tag1 tag2 tag3
+  ###
+  ```
+  - missing cmd mark list:
+  ```md
+  ===tags:
+  tag1 tag2 tag3
+  ===
+  ```
+  - missing cmd single linkable tag:
+  ```cmd
+  #tag1#
+  ```
+  or
+  ```cmd
+  # Title #tag1#
+  
+  [Link to Title](@tag1)
+  ```
 
- 
-
+## markdown-it -- addons
+- https://github.com/camelaissani/markdown-it-include
+- https://github.com/valeriangalliat/markdown-it-anchor
+- https://github.com/arve0/markdown-it-attrs
+- https://github.com/markdown-it/markdown-it-emoji
+  - https://dev.to/nikolab/complete-list-of-github-markdown-emoji-markup-5aia
+- https://github.com/valeriangalliat/markdown-it-highlightjs
+- https://github.com/camelaissani/markdown-it-include
+- https://github.com/cmaas/markdown-it-table-of-contents
 
 
 ## Text URL Rendering 
